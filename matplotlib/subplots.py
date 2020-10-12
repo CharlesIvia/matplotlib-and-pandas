@@ -11,7 +11,7 @@ py_salaries = data['Python']
 js_salaries = data['JavaScript']
 
 
-fig, ax = plt.subplots(2)
+fig, ax = plt.subplots(2, sharex=True)
 
 ax[0].plot(ages, py_salaries, label='Python')
 ax[0].plot(ages, js_salaries, label='JavaScript')
@@ -23,8 +23,6 @@ ax[0].legend()
 ax[1].legend()
 
 ax[0].set_title('Median Salary (USD) by Age')
-ax[1].set_title('Median Salary (USD) by Age')
-ax[0].set_xlabel('Ages')
 ax[1].set_xlabel('Ages')
 ax[0].set_ylabel('Median Salary (USD)')
 ax[1].set_ylabel('Median Salary (USD)')
